@@ -25,18 +25,11 @@
         {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: '/' %}
         <li class="hyde nav-item{% if p.url contains url[1] %} active {% endif %}">
           <a href="{{ p.url }}">{{ p.title }}</a>
+           <a href="about">about</a>
+           <a href="{{ p.url }}">{{ p.title }}</a>
         </li>
         {% endif %} {% endfor %}
-         {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: 'about' %}
-        <li class="hyde nav-item{% if p.url contains url[1] %} active {% endif %}">
-          <a href="{{ p.url }}">{{ p.title }}</a>
-        </li>
-        {% endif %} {% endfor %}
-         {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: 'projects' %}
-        <li class="hyde nav-item{% if p.url contains url[1] %} active {% endif %}">
-          <a href="{{ p.url }}">{{ p.title }}</a>
-        </li>
-        {% endif %} {% endfor %}
+  
       </ul>
     </div>
   </nav>
